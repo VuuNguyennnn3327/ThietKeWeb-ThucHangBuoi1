@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán Đơn Hàng - The Green Corner</title>
+
+    <!-- Font chữ Inter & Playfair Display và Icon Font Awesome 6 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Tự động chuẩn hóa URL (Fix lỗi 404 file tĩnh khi chạy trên GitHub Pages / Vercel thiếu dấu / cuối) -->
+    <script>
+        if (window.location.pathname.length > 1 && !window.location.pathname.endsWith('/') && !window.location.pathname.includes('.')) {
+            window.location.replace(window.location.pathname + '/' + window.location.search + window.location.hash);
+        }
+    </script>
+
+    <!-- Liên kết tới CSS chính: Hỗ trợ cả 2 trường hợp thư mục Styles/ và styles/ trên máy chủ Linux/Vercel -->
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- TOPBAR -->
+    <div class="header-topbar">
+        <div class="container topbar-wrapper">
+            <div class="topbar-left">
+                <div class="topbar-item"><i class="fa-solid fa-envelope"></i> <span>hotro@thegreencorner.vn</span></div>
+                <div class="topbar-item"><i class="fa-solid fa-truck-fast"></i> <span>Freeship toàn quốc cho đơn hàng từ 300.000đ</span></div>
+            </div>
+            <div class="topbar-right">
+                <a href="contact.html" class="topbar-user"><i class="fa-solid fa-user"></i> <span>Tài khoản</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="header">
+        <div class="container header__wrapper">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span>The Green Corner</span>
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng</a></li>
+                    <li><a href="shop-details.html?id=1">Chi Tiết</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li class="active"><a href="checkout.html">Thanh Toán</a></li>
+                    <li><a href="blog.html">Tin Tức</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn" title="Yêu thích" onclick="window.location.href='shop.html'">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="action-badge wishlist-badge">0</span>
+                </button>
+                
+                <div class="cart-box-preview cart-btn" title="Xem giỏ hàng">
+                    <button class="action-btn">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="action-badge cart-badge">0</span>
+                    </button>
+                    <div class="cart-info-text">
+                        <span>Giỏ hàng:</span>
+                        <strong class="header-cart-total">0đ</strong>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Mở menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <h1 class="breadcrumb-title">Thanh Toán</h1>
+            <div class="breadcrumb-nav">
+                <a href="index.html">Trang Chủ</a>
+                <span>/</span>
+                <a href="cart.html">Giỏ Hàng</a>
+                <span>/</span>
+                <span class="current">Thanh Toán Đơn Hàng</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CHECKOUT SECTION -->
+    <main class="container checkout-page-section">
+        
+        <form id="checkout-form" class="checkout-grid">
+            
+            <!-- CỘT TRÁI: THÔNG TIN GIAO HÀNG (BILLING DETAILS) -->
+            <div class="checkout-card">
+                <h3><i class="fa-solid fa-truck-ramp-box"></i> Thông Tin Giao Nhận</h3>
+                
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label>Họ và tên người nhận *</label>
+                        <input type="text" name="fullname" placeholder="Nguyễn Văn A" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Số điện thoại liên hệ *</label>
+                        <input type="tel" name="phone" placeholder="0987.xxx.xxx" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Địa chỉ Email *</label>
+                    <input type="email" name="email" placeholder="example@gmail.com" required>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label>Tỉnh / Thành phố *</label>
+                        <input type="text" name="city" placeholder="Hà Nội / TP.HCM..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Quận / Huyện *</label>
+                        <input type="text" name="district" placeholder="Quận Đống Đa..." required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Địa chỉ chi tiết (Số nhà, tên đường, tòa nhà) *</label>
+                    <input type="text" name="address" placeholder="Số 123 Đường Láng, Phường Thịnh Quang" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Ghi chú đơn hàng (Tùy chọn)</label>
+                    <textarea rows="3" name="notes" placeholder="Ví dụ: Giao giờ hành chính, chọn cây có tán sum sê, bọc kỹ chậu đất..."></textarea>
+                </div>
+            </div>
+
+            <!-- CỘT PHẢI: ĐƠN HÀNG CỦA BẠN & PHƯƠNG THỨC THANH TOÁN -->
+            <div class="checkout-card">
+                <h3><i class="fa-solid fa-receipt"></i> Đơn Hàng Của Bạn</h3>
+
+                <!-- Danh sách sản phẩm mua -->
+                <div id="checkout-items-list" style="margin-bottom: 18px;">
+                    <!-- Nạp tự động qua renderCheckoutOrder() -->
+                </div>
+
+                <!-- Tóm tắt chi phí -->
+                <div style="border-top: 1px solid var(--border-color); padding-top: 14px; margin-bottom: 20px;">
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <strong id="checkout-subtotal">0đ</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Giảm giá:</span>
+                        <span id="checkout-discount" style="color: var(--sale-red); font-weight: 700;">-0đ</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí vận chuyển:</span>
+                        <span id="checkout-shipping">Miễn phí</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Tổng thanh toán:</span>
+                        <strong id="checkout-total">0đ</strong>
+                    </div>
+                </div>
+
+                <!-- Phương thức thanh toán -->
+                <div class="payment-options-box">
+                    <h4 style="font-size: 15px; font-weight: 800; margin-bottom: 14px;">Chọn Phương Thức Thanh Toán</h4>
+                    
+                    <label class="payment-option-item">
+                        <input type="radio" name="payment_method" value="cod" checked>
+                        <div>
+                            <strong>Thanh toán tiền mặt khi nhận hàng (COD)</strong>
+                            <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 2px;">
+                                Kiểm tra cây xanh khỏe khoắn, đúng kích cỡ trước khi thanh toán.
+                            </p>
+                        </div>
+                    </label>
+
+                    <label class="payment-option-item">
+                        <input type="radio" name="payment_method" value="bank">
+                        <div>
+                            <strong>Chuyển khoản Ngân Hàng (VietQR Quét Mã)</strong>
+                            <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 2px;">
+                                Chuyển khoản 24/7 qua mã QR tự động xác nhận trong 30 giây.
+                            </p>
+                        </div>
+                    </label>
+
+                    <!-- Khung hiển thị QR code chuyển khoản VietQR -->
+                    <div class="bank-qr-box" id="bank-qr-box" style="display: none;">
+                        <h5 style="color: var(--primary-color); font-weight: 800;">QUÉT MÃ VIETQR ĐỂ THANH TOÁN</h5>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=THE_GREEN_CORNER_DONHANG_LAB1_6651071094" alt="Mã VietQR" class="bank-qr-img">
+                        <p style="font-size: 13px; font-weight: 600;">Ngân Hàng: MB Bank (Quân Đội)</p>
+                        <p style="font-size: 13px;">Số Tài Khoản: <b>6651071094</b></p>
+                        <p style="font-size: 13px;">Chủ Tài Khoản: <b>NGUYEN TRUONG VU</b></p>
+                    </div>
+
+                    <label class="payment-option-item">
+                        <input type="radio" name="payment_method" value="momo">
+                        <div>
+                            <strong>Ví Điện Tử MoMo / ZaloPay</strong>
+                            <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 2px;">
+                                Nhanh chóng, tiện lợi, nhận thêm điểm tích lũy.
+                            </p>
+                        </div>
+                    </label>
+                </div>
+
+                <div style="margin: 20px 0 24px; font-size: 13px; color: var(--text-muted);">
+                    <label style="display: flex; gap: 8px; align-items: flex-start; cursor: pointer;">
+                        <input type="checkbox" required checked style="margin-top: 3px;">
+                        <span>Tôi đã kiểm tra kỹ đơn hàng và đồng ý với điều khoản & chính sách đổi trả của The Green Corner.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100" style="padding: 15px; font-size: 15px;">
+                    <i class="fa-solid fa-lock"></i> ĐẶT HÀNG NGAY
+                </button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__wrapper">
+            <div class="footer__col">
+                <a href="index.html" class="logo"><i class="fa-solid fa-leaf"></i> <span>The Green Corner</span></a>
+                <p class="footer-desc">Mang hơi thở thuần khiết của thiên nhiên vào không gian sống của bạn.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Chính Sách</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Bảo hành 30 ngày</a></li>
+                    <li><a href="#">Vận chuyển an toàn</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Liên Hệ</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Đường Láng, Đống Đa, Hà Nội</p>
+                <p><i class="fa-solid fa-phone"></i> Hotline: 0987.654.321</p>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2026 The Green Corner. Đồ án Thực hành Web.</p>
+        </div>
+    </footer>
+
+    <script src="Scripts/main.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>

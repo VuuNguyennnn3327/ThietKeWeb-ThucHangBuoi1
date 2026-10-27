@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ Với Chúng Tôi - The Green Corner</title>
+
+    <!-- Font chữ Inter & Playfair Display và Icon Font Awesome 6 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+
+    <!-- TOPBAR -->
+    <div class="header-topbar">
+        <div class="container topbar-wrapper">
+            <div class="topbar-left">
+                <div class="topbar-item"><i class="fa-solid fa-envelope"></i> <span>hotro@thegreencorner.vn</span></div>
+                <div class="topbar-item"><i class="fa-solid fa-truck-fast"></i> <span>Freeship toàn quốc cho đơn hàng từ 300.000đ</span></div>
+            </div>
+            <div class="topbar-right">
+                <a href="contact.html" class="topbar-user"><i class="fa-solid fa-user"></i> <span>Tài khoản</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="header">
+        <div class="container header__wrapper">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span>The Green Corner</span>
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng</a></li>
+                    <li><a href="shop-details.html?id=1">Chi Tiết</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                    <li><a href="blog.html">Tin Tức</a></li>
+                    <li class="active"><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn" title="Yêu thích" onclick="window.location.href='shop.html'">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="action-badge wishlist-badge">0</span>
+                </button>
+                
+                <div class="cart-box-preview cart-btn" title="Xem giỏ hàng">
+                    <button class="action-btn">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="action-badge cart-badge">0</span>
+                    </button>
+                    <div class="cart-info-text">
+                        <span>Giỏ hàng:</span>
+                        <strong class="header-cart-total">0đ</strong>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Mở menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <h1 class="breadcrumb-title">Liên Hệ Với Vườn Ươm</h1>
+            <div class="breadcrumb-nav">
+                <a href="index.html">Trang Chủ</a>
+                <span>/</span>
+                <span class="current">Liên Hệ</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTACT -->
+    <main class="container contact-page" style="padding-bottom: 70px;">
+        
+        <div class="contact-layout">
+            
+            <!-- CỘT TRÁI: THÔNG TIN & BẢN ĐỒ GOOGLE MAPS -->
+            <div class="contact-info">
+                <h3 class="info-title"><i class="fa-solid fa-address-book"></i> THÔNG TIN TRỰC TIẾP</h3>
+                
+                <ul class="info-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Địa chỉ vườn ươm & Showroom</strong>
+                            <p>123 Đường Láng, Phường Thịnh Quang, Đống Đa, Hà Nội</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Tổng đài tư vấn & Zalo</strong>
+                            <p>0987.654.321 (Hỗ trợ 24/7)</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Hòm thư hỗ trợ khách hàng</strong>
+                            <p>hotro@thegreencorner.vn</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong>Thời gian đón tiếp</strong>
+                            <p>8:00 - 21:00 hàng ngày (kể cả Thứ 7 và Chủ Nhật)</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Bản đồ Google Maps nhúng iframe mượt mà -->
+                <div class="map-wrapper" style="margin-top: 25px; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--card-shadow); border: 1px solid var(--border-color);">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.4854089889617!2d105.81156557503102!3d21.01325498063236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab63795b8d81%3A0x6b4986b2fa9541a!2zMTIzIMSQxrDhu51uZyBMw6FuZywgVGjhu4tuaCBRdWFuZywgxJDhu5FuZyDEkGEsIEjDoCBO4buZaQ!5e0!3m2!1svi!2s!4v1700000000000" 
+                        width="100%" 
+                        height="260" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- CỘT PHẢI: FORM GỬI TIN NHẮN & CÂU HỎI THƯỜNG GẶP -->
+            <div>
+                <div class="contact-form-card">
+                    <h3>GỬI LỜI NHẮN CHO CHÚNG TÔI</h3>
+                    <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 20px;">
+                        Bạn cần tư vấn phong thủy theo mệnh, thiết kế ban công xanh hay hỗ trợ đơn hàng? Hãy để lại tin nhắn, kỹ sư cây trồng của chúng tôi sẽ gọi lại ngay.
+                    </p>
+                    <form id="contactForm" onsubmit="handleContactFormSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" placeholder="Họ và tên của bạn *" required>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <input type="tel" placeholder="Số điện thoại *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Địa chỉ email *" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="4" placeholder="Nội dung lời nhắn hoặc câu hỏi cần giải đáp..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fa-solid fa-paper-plane"></i> GỬI LIÊN HỆ NGAY
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Accordion Câu hỏi thường gặp (FAQ) -->
+                <div style="margin-top: 30px;">
+                    <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 14px;">Câu Hỏi Thường Gặp (FAQ)</h4>
+                    
+                    <div class="filter-group" style="background: var(--white); padding: 14px 18px; border-radius: var(--radius-sm); margin-bottom: 10px;">
+                        <div class="filter-group__header" onclick="toggleAccordion(this)">
+                            <span>Cây chuyển đi xa có bị dập nát, gãy cành không?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-list" style="display: none; padding-top: 10px; font-size: 13.5px; color: var(--text-body);">
+                            The Green Corner sử dụng khuôn xốp định hình thân và màng bọc giữ ẩm bầu đất chuyên dụng. Cây được cố định trong thùng carton chịu lực 5 lớp, cam kết 100% nguyên vẹn khi tới tay bạn.
+                        </div>
+                    </div>
+
+                    <div class="filter-group" style="background: var(--white); padding: 14px 18px; border-radius: var(--radius-sm);">
+                        <div class="filter-group__header" onclick="toggleAccordion(this)">
+                            <span>Chính sách bảo hành cây 30 ngày hoạt động ra sao?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-list" style="display: none; padding-top: 10px; font-size: 13.5px; color: var(--text-body);">
+                            Trong vòng 30 ngày kể từ khi nhận cây, nếu cây bị vàng lá, thối rễ do lỗi giá thể hoặc vận chuyển, bạn chỉ cần chụp ảnh gửi qua Zalo hotline, chúng tôi sẽ đổi ngay chậu cây mới hoàn toàn miễn phí.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__wrapper">
+            <div class="footer__col">
+                <a href="index.html" class="logo"><i class="fa-solid fa-leaf"></i> <span>The Green Corner</span></a>
+                <p class="footer-desc">Mang hơi thở thuần khiết của thiên nhiên vào không gian sống của bạn.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Chính Sách</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Bảo hành 30 ngày</a></li>
+                    <li><a href="#">Vận chuyển an toàn</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Liên Hệ</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Đường Láng, Đống Đa, Hà Nội</p>
+                <p><i class="fa-solid fa-phone"></i> Hotline: 0987.654.321</p>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2026 The Green Corner. Đồ án Thực hành Web.</p>
+        </div>
+    </footer>
+
+    <script src="Scripts/main.js"></script>
+</body>
+</html>

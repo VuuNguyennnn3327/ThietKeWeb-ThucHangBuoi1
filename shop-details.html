@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm - The Green Corner</title>
+
+    <!-- Font chữ Inter & Playfair Display và Icon Font Awesome 6 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+
+    <!-- TOPBAR -->
+    <div class="header-topbar">
+        <div class="container topbar-wrapper">
+            <div class="topbar-left">
+                <div class="topbar-item"><i class="fa-solid fa-envelope"></i> <span>hotro@thegreencorner.vn</span></div>
+                <div class="topbar-item"><i class="fa-solid fa-truck-fast"></i> <span>Freeship toàn quốc cho đơn hàng từ 300.000đ</span></div>
+            </div>
+            <div class="topbar-right">
+                <div class="topbar-social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+                <a href="contact.html" class="topbar-user"><i class="fa-solid fa-user"></i> <span>Tài khoản</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="header">
+        <div class="container header__wrapper">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span>The Green Corner</span>
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng</a></li>
+                    <li class="active"><a href="shop-details.html?id=1">Chi Tiết</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                    <li><a href="blog.html">Tin Tức</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn" title="Yêu thích">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="action-badge wishlist-badge">0</span>
+                </button>
+                
+                <div class="cart-box-preview cart-btn" title="Xem giỏ hàng">
+                    <button class="action-btn">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="action-badge cart-badge">0</span>
+                    </button>
+                    <div class="cart-info-text">
+                        <span>Giỏ hàng:</span>
+                        <strong class="header-cart-total">0đ</strong>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Mở menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <h1 class="breadcrumb-title">Thông Tin Cây Cảnh</h1>
+            <div class="breadcrumb-nav">
+                <a href="index.html">Trang Chủ</a>
+                <span>/</span>
+                <a href="shop.html">Cửa Hàng</a>
+                <span>/</span>
+                <span class="current" id="breadcrumb-product-name">Chi tiết cây</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PRODUCT DETAIL SECTION -->
+    <main class="container" id="product-detail-section">
+        
+        <div class="product-detail-layout">
+            
+            <!-- CỘT TRÁI: BỘ ẢNH GALLERY -->
+            <div class="detail-gallery">
+                <div class="detail-main-frame">
+                    <img id="detail-main-img" src="Images/Cây Trầu Bà Lá Xẻ Đột Biến.jpg" alt="Chi tiết cây">
+                </div>
+                <div class="detail-thumbs-row" id="detail-thumbs">
+                    <!-- Nạp ảnh thumbnail tự động -->
+                </div>
+            </div>
+
+            <!-- CỘT PHẢI: THÔNG TIN CÂY & HÀNH ĐỘNG MUA -->
+            <div class="detail-info-col">
+                <span class="detail-category" id="detail-category">Cây Trong Nhà</span>
+                <h2 class="detail-title" id="detail-title">Cây Trầu Bà Lá Xẻ Đột Biến</h2>
+                
+                <div class="detail-meta-row">
+                    <div class="product-rating" id="detail-rating">
+                        <!-- Nạp sao -->
+                    </div>
+                    <span class="text-muted" id="detail-reviews-count">(38 đánh giá từ khách hàng)</span>
+                </div>
+
+                <div class="detail-price-box">
+                    <span class="detail-price" id="detail-price">850.000đ</span>
+                    <span class="detail-old-price" id="detail-old-price">1.050.000đ</span>
+                </div>
+
+                <p class="detail-desc" id="detail-desc">
+                    Dòng cây đột biến cẩm thạch quý hiếm bậc nhất với các vệt màu trắng tinh khôi điểm xuyết trên nền lá xẻ tự nhiên. Thích hợp trang trí phòng khách sang trọng, văn phòng giám đốc và không gian kiến trúc hiện đại.
+                </p>
+
+                <div class="detail-stock-badge" id="detail-stock">
+                    <i class="fa-solid fa-check"></i> Còn 14 chậu tại vườn ươm
+                </div>
+
+                <div class="detail-actions-row">
+                    <div class="qty-stepper">
+                        <button type="button" onclick="const i=document.getElementById('detail-qty-input'); if(i.value>1) i.value--;">-</button>
+                        <input type="number" id="detail-qty-input" value="1" min="1">
+                        <button type="button" onclick="const i=document.getElementById('detail-qty-input'); i.value++;">+</button>
+                    </div>
+
+                    <button class="btn btn-primary" id="detail-add-cart-btn">
+                        <i class="fa-solid fa-cart-plus"></i> THÊM VÀO GIỎ HÀNG
+                    </button>
+
+                    <button class="action-btn" title="Thêm vào yêu thích" onclick="toggleWishlist(1)" data-wishlist-id="1">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Cam kết chuẩn The Green Corner -->
+                <div class="detail-perks-box">
+                    <div class="perk-item">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Giao hỏa tốc 2H tại nội thành</span>
+                    </div>
+                    <div class="perk-item">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <span>Bảo hành 1 đổi 1 trong 30 ngày</span>
+                    </div>
+                    <div class="perk-item">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        <span>Tư vấn chăm sóc cây trọn đời</span>
+                    </div>
+                </div>
+
+                <div class="qv-meta" style="margin-top: 25px;">
+                    <p><b>Mã SKU:</b> <span id="detail-sku">TGC-MON-01</span></p>
+                    <p><b>Chia sẻ:</b> 
+                        <a href="#" style="margin-left: 8px; color: var(--primary-color);"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" style="margin-left: 8px; color: var(--primary-color);"><i class="fa-brands fa-pinterest"></i></a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TABS THÔNG TIN CHI TIẾT (CHUẨN ORGANI SHOP DETAILS) -->
+        <section class="detail-tabs-section">
+            <div class="tabs-nav-bar">
+                <button class="tab-nav-btn active" onclick="switchDetailTab('desc', this)">Mô Tả Sinh Học</button>
+                <button class="tab-nav-btn" onclick="switchDetailTab('care', this)">Hướng Dẫn Chăm Sóc</button>
+                <button class="tab-nav-btn" onclick="switchDetailTab('reviews', this)">Đánh Giá (38)</button>
+            </div>
+
+            <!-- Tab 1: Mô tả -->
+            <div class="tab-panel active" id="tab-desc-panel">
+                <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 12px;">Đặc tính sinh học & Không gian phù hợp</h3>
+                <p style="margin-bottom: 14px; line-height: 1.8;">
+                    Cây cảnh tại The Green Corner được nuôi dưỡng hoàn toàn bằng chế độ giá thể hữu cơ vi sinh, rễ bén khỏe mạnh và tán lá phát triển tự nhiên. Dòng cây này không chỉ mang giá trị thẩm mỹ vượt bậc cho không gian sống hiện đại mà còn có khả năng hấp thụ các chất hữu cơ bay hơi độc hại (VOCs) do thảm trải sàn, sơn tường và đồ gỗ công nghiệp phát tán.
+                </p>
+                <p style="line-height: 1.8;">
+                    Theo phong thủy ngũ hành, cây lá xẻ xum xuê đại diện cho nguồn sinh khí dồi dào, thu hút năng lượng tài lộc, bình an và tạo cảm giác thư thái sau những giờ làm việc căng thẳng.
+                </p>
+            </div>
+
+            <!-- Tab 2: Hướng dẫn chăm sóc -->
+            <div class="tab-panel" id="tab-care-panel" style="display: none;">
+                <div id="tab-care-guide">
+                    <!-- Nạp bởi JavaScript -->
+                </div>
+            </div>
+
+            <!-- Tab 3: Đánh giá của khách hàng -->
+            <div class="tab-panel" id="tab-reviews-panel" style="display: none;">
+                <div class="reviews-box">
+                    <div style="border-bottom: 1px solid #edf2f7; padding-bottom: 16px; margin-bottom: 16px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                            <strong>Trần Minh Anh</strong>
+                            <span class="text-muted" style="font-size: 12px;">2 ngày trước</span>
+                        </div>
+                        <div style="color: var(--accent-orange); font-size: 12px; margin-bottom: 6px;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p style="font-size: 14px;">Cây nhận được đóng gói cực kỳ cẩn thận bằng khung gỗ và màng xốp, lá xanh mướt không hề bị dập hay gãy dù ship từ xa. Rất hài lòng với The Green Corner!</p>
+                    </div>
+
+                    <div style="border-bottom: 1px solid #edf2f7; padding-bottom: 16px; margin-bottom: 20px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                            <strong>Lê Hải Đăng</strong>
+                            <span class="text-muted" style="font-size: 12px;">1 tuần trước</span>
+                        </div>
+                        <div style="color: var(--accent-orange); font-size: 12px; margin-bottom: 6px;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p style="font-size: 14px;">Cây để bàn làm việc rất xinh xắn, shop có gửi kèm tờ hướng dẫn chăm sóc chi tiết từng ngày. Sẽ ủng hộ shop thêm nhiều chậu nữa.</p>
+                    </div>
+
+                    <!-- Form gửi đánh giá -->
+                    <form onsubmit="event.preventDefault(); showToast('Cảm ơn bạn đã gửi đánh giá! Bình luận sẽ hiển thị sau khi duyệt.', 'success'); this.reset();" style="background: #f8faf9; padding: 20px; border-radius: var(--radius-md);">
+                        <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 12px;">Thêm Đánh Giá Của Bạn</h4>
+                        <div class="form-group">
+                            <textarea rows="3" placeholder="Chia sẻ cảm nhận của bạn về chất lượng cây và dịch vụ đóng gói..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm">GỬI ĐÁNH GIÁ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SẢN PHẨM TƯƠNG TỰ (RELATED PRODUCTS) -->
+        <section style="margin-bottom: 80px;">
+            <div class="section-header-center">
+                <h2 class="section-title">Sản Phẩm Tương Tự</h2>
+                <p class="section-subtitle">Có thể bạn cũng sẽ yêu thích những mẫu cây cảnh tuyệt đẹp này</p>
+            </div>
+            <div class="products-grid-4" id="related-products-grid">
+                <!-- Nạp bởi hàm renderRelatedProducts() -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__wrapper">
+            <div class="footer__col">
+                <a href="index.html" class="logo"><i class="fa-solid fa-leaf"></i> <span>The Green Corner</span></a>
+                <p class="footer-desc">Mang hơi thở thuần khiết của thiên nhiên vào không gian sống của bạn.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Chính Sách</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Bảo hành 30 ngày</a></li>
+                    <li><a href="#">Vận chuyển an toàn</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Liên Hệ</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Đường Láng, Đống Đa, Hà Nội</p>
+                <p><i class="fa-solid fa-phone"></i> Hotline: 0987.654.321</p>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2026 The Green Corner. Đồ án Thực hành Web.</p>
+        </div>
+    </footer>
+
+    <script src="Scripts/main.js"></script>
+    <script>
+        function switchDetailTab(tabName, btn) {
+            document.querySelectorAll('.tab-nav-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.getElementById('tab-desc-panel').style.display = tabName === 'desc' ? 'block' : 'none';
+            document.getElementById('tab-care-panel').style.display = tabName === 'care' ? 'block' : 'none';
+            document.getElementById('tab-reviews-panel').style.display = tabName === 'reviews' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

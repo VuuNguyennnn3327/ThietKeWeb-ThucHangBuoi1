@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cẩm Nang Cây Cảnh & Không Gian Xanh - The Green Corner</title>
+
+    <!-- Font chữ Inter & Playfair Display và Icon Font Awesome 6 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+
+    <!-- TOPBAR -->
+    <div class="header-topbar">
+        <div class="container topbar-wrapper">
+            <div class="topbar-left">
+                <div class="topbar-item"><i class="fa-solid fa-envelope"></i> <span>hotro@thegreencorner.vn</span></div>
+                <div class="topbar-item"><i class="fa-solid fa-truck-fast"></i> <span>Freeship toàn quốc cho đơn hàng từ 300.000đ</span></div>
+            </div>
+            <div class="topbar-right">
+                <a href="contact.html" class="topbar-user"><i class="fa-solid fa-user"></i> <span>Tài khoản</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="header">
+        <div class="container header__wrapper">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span>The Green Corner</span>
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng</a></li>
+                    <li><a href="shop-details.html?id=1">Chi Tiết</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                    <li class="active"><a href="blog.html">Tin Tức</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn" title="Yêu thích" onclick="window.location.href='shop.html'">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="action-badge wishlist-badge">0</span>
+                </button>
+                
+                <div class="cart-box-preview cart-btn" title="Xem giỏ hàng">
+                    <button class="action-btn">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="action-badge cart-badge">0</span>
+                    </button>
+                    <div class="cart-info-text">
+                        <span>Giỏ hàng:</span>
+                        <strong class="header-cart-total">0đ</strong>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Mở menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <h1 class="breadcrumb-title">Cẩm Nang Làm Vườn & Không Gian Xanh</h1>
+            <div class="breadcrumb-nav">
+                <a href="index.html">Trang Chủ</a>
+                <span>/</span>
+                <span class="current">Tin Tức & Cẩm Nang</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN BLOG LAYOUT (2 CỘT CHUẨN MẪU ORGANI) -->
+    <main class="container shop-layout">
+        
+        <!-- CỘT TRÁI: SIDEBAR TIN TỨC -->
+        <aside class="shop-sidebar">
+            
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Tìm Kiếm Bài Viết</h3>
+                <div class="search-box-organi">
+                    <input type="text" class="header-search-input" placeholder="Tìm kiếm kinh nghiệm...">
+                    <button class="search-submit-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Chuyên Mục</h3>
+                <ul class="filter-list">
+                    <li><a href="#" class="active"><span>Chăm sóc cây trong nhà</span> <span>(12)</span></a></li>
+                    <li><a href="#"><span>Phong thủy tài lộc</span> <span>(8)</span></a></li>
+                    <li><a href="#"><span>Kỹ thuật nhân giống</span> <span>(6)</span></a></li>
+                    <li><a href="#"><span>Ý tưởng Decor không gian</span> <span>(15)</span></a></li>
+                    <li><a href="#"><span>Trị sâu bệnh hữu cơ</span> <span>(9)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Bài Viết Xem Nhiều</h3>
+                <div class="mini-products-list">
+                    <div class="mini-product-item">
+                        <div class="mini-product-thumb" style="width: 70px; height: 70px;">
+                            <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=400&auto=format&fit=crop&q=80" alt="Chăm cây văn phòng">
+                        </div>
+                        <div class="mini-product-info">
+                            <h5 style="font-size: 13px;"><a href="#">5 Loại Cây Hút Bức Xạ Máy Tính Tốt Nhất</a></h5>
+                            <span class="text-muted" style="font-size: 11px;">25/10/2026</span>
+                        </div>
+                    </div>
+
+                    <div class="mini-product-item">
+                        <div class="mini-product-thumb" style="width: 70px; height: 70px;">
+                            <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=400&auto=format&fit=crop&q=80" alt="Kỹ thuật giâm cành">
+                        </div>
+                        <div class="mini-product-info">
+                            <h5 style="font-size: 13px;"><a href="#">Kỹ Thuật Nhân Giống Trầu Bà Bằng Thủy Canh</a></h5>
+                            <span class="text-muted" style="font-size: 11px;">18/10/2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Thẻ Gắn (Tags)</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag-pill">#Monstera</a>
+                    <a href="#" class="tag-pill">#CayTrongNha</a>
+                    <a href="#" class="tag-pill">#DecorBanLamViec</a>
+                    <a href="#" class="tag-pill">#TuoiCayDungCach</a>
+                    <a href="#" class="tag-pill">#CayPhongThuy</a>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- CỘT PHẢI: LƯỚI BÀI VIẾT BLOG -->
+        <section class="shop-content">
+            <div class="blog-grid" style="grid-template-columns: repeat(2, 1fr); gap: 28px;">
+                
+                <!-- Bài 1 -->
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=600&auto=format&fit=crop&q=80" alt="Cây lọc không khí">
+                        <span class="blog-date-badge"><i class="fa-regular fa-calendar"></i> 25/10/2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-user"></i> Admin</span>
+                            <span><i class="fa-regular fa-comment"></i> 8 phản hồi</span>
+                        </div>
+                        <h4 class="blog-title"><a href="#">5 Loại Cây Hút Bức Xạ Máy Tính Tốt Nhất Cho Dân Công Sở</a></h4>
+                        <p class="blog-excerpt">Bảo vệ mắt và thanh lọc không khí xung quanh bàn làm việc với những loại cây dễ trồng, ít tốn công tưới.</p>
+                        <a href="#" class="blog-read-more">ĐỌC CHI TIẾT <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Bài 2 -->
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=600&auto=format&fit=crop&q=80" alt="Nhân giống cây">
+                        <span class="blog-date-badge"><i class="fa-regular fa-calendar"></i> 18/10/2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-user"></i> Nguyễn Trường Vũ</span>
+                            <span><i class="fa-regular fa-comment"></i> 14 phản hồi</span>
+                        </div>
+                        <h4 class="blog-title"><a href="#">Kỹ Thuật Nhân Giống Trầu Bà Lá Xẻ Bằng Phương Pháp Thủy Canh</a></h4>
+                        <p class="blog-excerpt">Từng bước cắt đốt rễ khí sinh và giâm nước giúp rễ phát triển nhanh và cây con khỏe mạnh 100%.</p>
+                        <a href="#" class="blog-read-more">ĐỌC CHI TIẾT <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Bài 3 -->
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?w=600&auto=format&fit=crop&q=80" alt="Phong thủy cây cảnh">
+                        <span class="blog-date-badge"><i class="fa-regular fa-calendar"></i> 12/10/2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-user"></i> Master Phong Thủy</span>
+                            <span><i class="fa-regular fa-comment"></i> 21 phản hồi</span>
+                        </div>
+                        <h4 class="blog-title"><a href="#">Bí Quyết Đặt Cây Theo Hướng Để Rước Tài Lộc, May Mắn Vào Nhà</a></h4>
+                        <p class="blog-excerpt">Vị trí cung Tài Lộc, góc Đông Nam và phòng khách nên bài trí cây gì để kích hoạt vượng khí cho gia chủ?</p>
+                        <a href="#" class="blog-read-more">ĐỌC CHI TIẾT <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Bài 4 -->
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=600&auto=format&fit=crop&q=80" alt="Tưới nước cây">
+                        <span class="blog-date-badge"><i class="fa-regular fa-calendar"></i> 05/10/2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-user"></i> Kỹ Sư Nông Nghiệp</span>
+                            <span><i class="fa-regular fa-comment"></i> 19 phản hồi</span>
+                        </div>
+                        <h4 class="blog-title"><a href="#">Sai Lầm Phổ Biến Khi Tưới Nước Khiến Cây Cảnh Bị Thối Rễ</a></h4>
+                        <p class="blog-excerpt">Tìm hiểu dấu hiệu thừa nước, cách kiểm tra độ ẩm sâu dưới đáy chậu và nguyên tắc 'khô mới tưới' chuẩn khoa học.</p>
+                        <a href="#" class="blog-read-more">ĐỌC CHI TIẾT <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Phân trang -->
+            <div class="pagination">
+                <span class="page-btn active">1</span>
+                <span class="page-btn">2</span>
+                <span class="page-btn"><i class="fa-solid fa-chevron-right"></i></span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__wrapper">
+            <div class="footer__col">
+                <a href="index.html" class="logo"><i class="fa-solid fa-leaf"></i> <span>The Green Corner</span></a>
+                <p class="footer-desc">Mang hơi thở thuần khiết của thiên nhiên vào không gian sống của bạn.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Chính Sách</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Bảo hành 30 ngày</a></li>
+                    <li><a href="#">Vận chuyển an toàn</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Liên Hệ</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Đường Láng, Đống Đa, Hà Nội</p>
+                <p><i class="fa-solid fa-phone"></i> Hotline: 0987.654.321</p>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2026 The Green Corner. Đồ án Thực hành Web.</p>
+        </div>
+    </footer>
+
+    <script src="Scripts/main.js"></script>
+</body>
+</html>

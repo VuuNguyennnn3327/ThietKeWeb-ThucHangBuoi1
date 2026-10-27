@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Green Corner - Thiên Đường Cây Cảnh & Không Gian Xanh</title>
+
+    <!-- Font chữ Inter & Playfair Display và Icon Font Awesome 6 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Liên kết tới CSS chính -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+
+    <!-- ================= KHỐI 1: TOP BAR CHUẨN MẪU ORGANI ================= -->
+    <div class="header-topbar">
+        <div class="container topbar-wrapper">
+            <div class="topbar-left">
+                <div class="topbar-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>hotro@thegreencorner.vn</span>
+                </div>
+                <div class="topbar-item">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <span>Freeship toàn quốc cho đơn hàng từ 300.000đ</span>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <div class="topbar-social">
+                    <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" title="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+                <a href="contact.html" class="topbar-user">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Đăng nhập / Đăng ký</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= KHỐI 2: HEADER CHÍNH ================= -->
+    <header class="header">
+        <div class="container header__wrapper">
+            <!-- 1. Logo thương hiệu -->
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span>The Green Corner</span>
+            </a>
+
+            <!-- 2. Menu điều hướng chính -->
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng</a></li>
+                    <li><a href="shop-details.html?id=1">Chi Tiết</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                    <li><a href="blog.html">Tin Tức</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+
+            <!-- 3. Cụm tương tác (Tìm kiếm, Yêu thích, Giỏ hàng) -->
+            <div class="header-actions">
+                <button class="action-btn" title="Yêu thích" onclick="window.location.href='shop.html'">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="action-badge wishlist-badge">0</span>
+                </button>
+                
+                <div class="cart-box-preview cart-btn" title="Xem giỏ hàng">
+                    <button class="action-btn">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="action-badge cart-badge">0</span>
+                    </button>
+                    <div class="cart-info-text">
+                        <span>Giỏ hàng:</span>
+                        <strong class="header-cart-total">0đ</strong>
+                    </div>
+                </div>
+
+                <!-- Nút Hamburger Menu cho điện thoại -->
+                <button class="mobile-menu-toggle" aria-label="Mở menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= KHỐI 2: HERO BANNER TOÀN MÀN HÌNH (FULL WIDTH HERO BANNER) ================= -->
+    <section class="hero-banner hero-banner--fullwidth">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content-wrapper">
+            <div class="hero-content">
+                <span class="hero-subtitle">100% CÂY XANH TƯƠI MÁT • HỮU CƠ</span>
+                <h1 class="hero-title">Mang Thiên Nhiên<br>Vào Không Gian Sống</h1>
+                <p class="hero-desc">
+                    Bộ sưu tập cây nội thất và để bàn được tuyển chọn kỹ lưỡng giúp thanh lọc không khí, giảm căng thẳng và nâng tầm thẩm mỹ cho ngôi nhà của bạn.
+                </p>
+                <div class="hero-buttons">
+                    <a href="shop.html" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> MUA NGAY</a>
+                    <a href="#video-guide" class="btn btn-outline"><i class="fa-solid fa-circle-play"></i> XEM VIDEO</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- ================= KHỐI 3: THANH TÌM KIẾM TRỰC TIẾP & HOTLINE HỖ TRỢ ================= -->
+    <div class="search-hotline-bar">
+        <div class="container">
+            <div class="hero-search-bar">
+                <!-- Khung tìm kiếm có chọn danh mục & gợi ý trực tiếp -->
+                <div class="search-box-organi">
+                    <select class="search-category-select">
+                        <option>Tất cả danh mục</option>
+                        <option>Cây để bàn</option>
+                        <option>Cây trong nhà</option>
+                        <option>Cây phong thủy</option>
+                        <option>Độc lạ</option>
+                    </select>
+                    <input type="text" class="header-search-input" placeholder="Bạn muốn tìm loại cây cảnh nào hôm nay? (gõ: trầu bà, bắt ruồi...)">
+                    <button class="search-submit-btn"><i class="fa-solid fa-magnifying-glass"></i> TÌM KIẾM</button>
+                </div>
+
+                <!-- Hộp Hotline hỗ trợ 24/7 -->
+                <div class="support-phone-box">
+                    <div class="support-icon">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div class="support-text">
+                        <h5>0987.654.321</h5>
+                        <p>Hỗ trợ tư vấn 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= KHỐI 4: DANH MỤC NỔI BẬT (QUICK CAROUSEL) ================= -->
+    <section class="category-highlights">
+        <div class="container">
+            <div class="cat-carousel-grid">
+                <a href="shop.html" class="cat-pill-card">
+                    <div class="cat-pill-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <span class="cat-pill-name">Cây Để Bàn</span>
+                </a>
+                <a href="shop.html" class="cat-pill-card">
+                    <div class="cat-pill-icon"><i class="fa-solid fa-house-chimney-window"></i></div>
+                    <span class="cat-pill-name">Cây Trong Nhà</span>
+                </a>
+                <a href="shop.html" class="cat-pill-card">
+                    <div class="cat-pill-icon"><i class="fa-solid fa-coins"></i></div>
+                    <span class="cat-pill-name">Cây Phong Thủy</span>
+                </a>
+                <a href="shop.html" class="cat-pill-card">
+                    <div class="cat-pill-icon"><i class="fa-solid fa-bug"></i></div>
+                    <span class="cat-pill-name">Cây Ăn Thịt</span>
+                </a>
+                <a href="shop.html" class="cat-pill-card">
+                    <div class="cat-pill-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <span class="cat-pill-name">Cây Thủy Sinh</span>
+                </a>
+                <a href="shop.html" class="cat-pill-card">
+                    <div class="cat-pill-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                    <span class="cat-pill-name">Lọc Bụi Mịn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KHỐI 5: SẢN PHẨM NỔI BẬT (FEATURED PRODUCTS & TAB FILTER) ================= -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header-center">
+                <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+                <p class="section-subtitle">Những chậu cây được yêu thích và đặt mua nhiều nhất trong tuần</p>
+            </div>
+
+            <!-- Tab lọc danh mục chuẩn phong cách Organi -->
+            <div class="featured-filter-tabs">
+                <button class="filter-tab-btn active" data-filter="all">Tất Cả</button>
+                <button class="filter-tab-btn" data-filter="Cây trong nhà">Cây Trong Nhà</button>
+                <button class="filter-tab-btn" data-filter="Cây để bàn">Cây Để Bàn</button>
+                <button class="filter-tab-btn" data-filter="Cây phong thủy">Cây Phong Thủy</button>
+                <button class="filter-tab-btn" data-filter="Độc lạ">Cây Ăn Thịt & Độc Lạ</button>
+            </div>
+
+            <!-- Lưới 8 sản phẩm (Được nạp dữ liệu động từ JavaScript) -->
+            <div class="products-grid-4" id="featured-products-grid">
+                <!-- Nội dung nạp động từ main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KHỐI 6: DUAL PROMOTION BANNERS (2 BANNER QUẢNG CÁO) ================= -->
+    <section class="promo-banners-section">
+        <div class="container">
+            <div class="promo-grid">
+                <!-- Banner 1 -->
+                <div class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=800&auto=format&fit=crop&q=80');">
+                    <div class="promo-overlay"></div>
+                    <div class="promo-content">
+                        <span>ƯU ĐÃI THÁNG NÀY</span>
+                        <h3>Bộ Sưu Tập Cây Để Bàn<br>Giảm Đến 25%</h3>
+                        <a href="shop.html" class="btn btn-primary btn-sm">KHÁM PHÁ NGAY</a>
+                    </div>
+                </div>
+
+                <!-- Banner 2 -->
+                <div class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=800&auto=format&fit=crop&q=80');">
+                    <div class="promo-overlay"></div>
+                    <div class="promo-content">
+                        <span>QUÀ TẶNG Ý NGHĨA</span>
+                        <h3>Cây Phong Thủy Chiêu Tài<br>Tặng Kèm Bình Tưới Cây</h3>
+                        <a href="shop.html" class="btn btn-primary btn-sm">MUA NGAY</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KHỐI 7: TRIPLE COLUMNS (ORGANI SIGNATURE: LATEST / TOP RATED / REVIEW) ================= -->
+    <section class="triple-columns-section">
+        <div class="container">
+            <div class="triple-grid">
+                
+                <!-- Cột 1: Sản phẩm mới nhất -->
+                <div class="column-card">
+                    <div class="column-header">
+                        <h3>Mới Cập Bến</h3>
+                        <div class="column-nav-arrows">
+                            <button class="nav-arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="nav-arrow-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="mini-products-list">
+                        <div class="mini-product-item">
+                            <a href="shop-details.html?id=1" class="mini-product-thumb">
+                                <img src="Images/Cây Trầu Bà Lá Xẻ Đột Biến.jpg" alt="Trầu Bà Lá Xẻ">
+                            </a>
+                            <div class="mini-product-info">
+                                <h5><a href="shop-details.html?id=1">Trầu Bà Lá Xẻ Đột Biến</a></h5>
+                                <span class="mini-product-price">850.000đ</span>
+                            </div>
+                        </div>
+                        <div class="mini-product-item">
+                            <a href="shop-details.html?id=2" class="mini-product-thumb">
+                                <img src="Images/Cây Bắt Ruồi.jpg" alt="Cây Bắt Ruồi">
+                            </a>
+                            <div class="mini-product-info">
+                                <h5><a href="shop-details.html?id=2">Cây Bắt Ruồi Thông Minh</a></h5>
+                                <span class="mini-product-price">160.000đ</span>
+                            </div>
+                        </div>
+                        <div class="mini-product-item">
+                            <a href="shop-details.html?id=3" class="mini-product-thumb">
+                                <img src="Images/Cây Dong Kiểng.jpg" alt="Cây Dong Kiểng">
+                            </a>
+                            <div class="mini-product-info">
+                                <h5><a href="shop-details.html?id=3">Cây Dong Kiểng Tam Thể</a></h5>
+                                <span class="mini-product-price">190.000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột 2: Bán chạy nhất -->
+                <div class="column-card">
+                    <div class="column-header">
+                        <h3>Bán Chạy Nhất</h3>
+                        <div class="column-nav-arrows">
+                            <button class="nav-arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="nav-arrow-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="mini-products-list">
+                        <div class="mini-product-item">
+                            <a href="shop-details.html?id=5" class="mini-product-thumb">
+                                <img src="Images/Cây Rau Má Cản.jpg" alt="Rau Má Cảnh">
+                            </a>
+                            <div class="mini-product-info">
+                                <h5><a href="shop-details.html?id=5">Cây Rau Má Cảnh Mini</a></h5>
+                                <span class="mini-product-price">120.000đ</span>
+                            </div>
+                        </div>
+                        <div class="mini-product-item">
+                            <a href="shop-details.html?id=4" class="mini-product-thumb">
+                                <img src="Images/Cây Dứa Cảnh.jpg" alt="Dứa Cảnh Nến">
+                            </a>
+                            <div class="mini-product-info">
+                                <h5><a href="shop-details.html?id=4">Cây Dứa Cảnh Nến Đỏ</a></h5>
+                                <span class="mini-product-price">150.000đ</span>
+                            </div>
+                        </div>
+                        <div class="mini-product-item">
+                            <a href="shop-details.html?id=6" class="mini-product-thumb">
+                                <img src="Images/Cây Dương Xỉ.jpg" alt="Dương Xỉ">
+                            </a>
+                            <div class="mini-product-info">
+                                <h5><a href="shop-details.html?id=6">Cây Dương Xỉ Cổ Đại</a></h5>
+                                <span class="mini-product-price">140.000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột 3: Đánh giá cao nhất -->
+                <div class="column-card">
+                    <div class="column-header">
+                        <h3>Đánh Giá Cao</h3>
+                        <div class="column-nav-arrows">
+                            <button class="nav-arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="nav-arrow-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="mini-products-list">
+                        <div class="mini-product-item">
+                            <a href="shop-details.html?id=1" class="mini-product-thumb">
+                                <img src="Images/Cây Trầu Bà Lá Xẻ Đột Biến.jpg" alt="Monstera">
+                            </a>
+                            <div class="mini-product-info">
+                                <h5><a href="shop-details.html?id=1">Trầu Bà Lá Xẻ Albo (5★)</a></h5>
+                                <span class="mini-product-price">850.000đ</span>
+                            </div>
+                        </div>
+                        <div class="mini-product-item">
+                            <a href="shop-details.html?id=5" class="mini-product-thumb">
+                                <img src="Images/Cây Rau Má Cản.jpg" alt="Cỏ đồng tiền">
+                            </a>
+                            <div class="mini-product-info">
+                                <h5><a href="shop-details.html?id=5">Cỏ Đồng Tiền May Mắn</a></h5>
+                                <span class="mini-product-price">120.000đ</span>
+                            </div>
+                        </div>
+                        <div class="mini-product-item">
+                            <a href="shop-details.html?id=3" class="mini-product-thumb">
+                                <img src="Images/Cây Dong Kiểng.jpg" alt="Dong Kiểng">
+                            </a>
+                            <div class="mini-product-info">
+                                <h5><a href="shop-details.html?id=3">Dong Kiểng Phong Thủy</a></h5>
+                                <span class="mini-product-price">190.000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KHỐI 8: VIDEO & HƯỚNG DẪN CHĂM SÓC (VIDEOS/ FOLDER) ================= -->
+    <section class="video-section" id="video-guide">
+        <div class="container">
+            <div class="video-wrapper">
+                <div class="video-text">
+                    <span class="hero-subtitle">VƯỜN ƯƠM THE GREEN CORNER</span>
+                    <h2>Nghệ Thuật Trồng & Chăm Sóc Cây Cảnh Trong Nhà</h2>
+                    <p>
+                        Cùng chuyên gia nông nghiệp của chúng tôi khám phá cách tưới nước, cung cấp ánh sáng và phòng trừ sâu bệnh để những chậu cây luôn xanh tốt quanh năm.
+                    </p>
+                    <ul class="video-features-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Bí quyết phối trộn giá thể tơi xốp, giữ ẩm không úng</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Kỹ thuật cắt tỉa kích thích chồi non phát triển nhanh</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Hướng dẫn thay chậu an toàn không làm đứt rễ non</li>
+                    </ul>
+                    <a href="blog.html" class="btn btn-primary" style="margin-top: 20px;">XEM CẨM NANG ĐẦY ĐỦ</a>
+                </div>
+
+                <!-- Video player lưu tại thư mục Videos/ theo yêu cầu đề bài -->
+                <div class="video-frame-box">
+                    <video controls poster="https://images.unsplash.com/photo-1545241047-6083a3684587?w=800&auto=format&fit=crop&q=80">
+                        <source src="Videos/intro-video.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ phát video HTML5.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KHỐI 9: TIN TỨC & MẸO CHĂM SÓC CÂY (FROM THE BLOG) ================= -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="section-header-center">
+                <h2 class="section-title">Cẩm Nang Làm Vườn</h2>
+                <p class="section-subtitle">Chia sẻ kinh nghiệm, phong thủy cây cảnh và phong cách sống xanh</p>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Bài 1 -->
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=600&auto=format&fit=crop&q=80" alt="Cách chăm sóc cây văn phòng">
+                        <span class="blog-date-badge"><i class="fa-regular fa-calendar"></i> 25/10/2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-user"></i> Admin</span>
+                            <span><i class="fa-regular fa-comment"></i> 8 bình luận</span>
+                        </div>
+                        <h4 class="blog-title"><a href="blog.html">5 Loại Cây Hút Bức Xạ Máy Tính Tốt Nhất Cho Dân Công Sở</a></h4>
+                        <p class="blog-excerpt">Bảo vệ mắt và thanh lọc không khí xung quanh bàn làm việc với những loại cây dễ trồng, ít tốn công tưới.</p>
+                        <a href="blog.html" class="blog-read-more">ĐỌC TIẾP <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Bài 2 -->
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=600&auto=format&fit=crop&q=80" alt="Nhân giống trầu bà lá xẻ">
+                        <span class="blog-date-badge"><i class="fa-regular fa-calendar"></i> 18/10/2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-user"></i> Nguyễn Trường Vũ</span>
+                            <span><i class="fa-regular fa-comment"></i> 14 bình luận</span>
+                        </div>
+                        <h4 class="blog-title"><a href="blog.html">Kỹ Thuật Nhân Giống Trầu Bà Lá Xẻ Bằng Phương Pháp Thủy Canh</a></h4>
+                        <p class="blog-excerpt">Từng bước cắt đốt rễ khí sinh và giâm nước giúp rễ phát triển nhanh và cây con khỏe mạnh 100%.</p>
+                        <a href="blog.html" class="blog-read-more">ĐỌC TIẾP <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Bài 3 -->
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?w=600&auto=format&fit=crop&q=80" alt="Phong thủy cây cảnh 2026">
+                        <span class="blog-date-badge"><i class="fa-regular fa-calendar"></i> 12/10/2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-user"></i> Master Phong Thủy</span>
+                            <span><i class="fa-regular fa-comment"></i> 21 bình luận</span>
+                        </div>
+                        <h4 class="blog-title"><a href="blog.html">Bí Quyết Đặt Cây Theo Hướng Để Rước Tài Lộc, May Mắn Vào Nhà</a></h4>
+                        <p class="blog-excerpt">Vị trí cung Tài Lộc, góc Đông Nam và phòng khách nên bài trí cây gì để kích hoạt vượng khí cho gia chủ?</p>
+                        <a href="blog.html" class="blog-read-more">ĐỌC TIẾP <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KHỐI 10: NEWSLETTER ĐĂNG KÝ NHẬN TIN ================= -->
+    <div class="newsletter-bar">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-text">
+                    <h3>Tham Gia Cộng Đồng Yêu Cây Cảnh</h3>
+                    <p>Đăng ký nhận mã giảm giá 10% cho đơn hàng đầu tiên và cẩm nang chăm cây hàng tuần.</p>
+                </div>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Cảm ơn bạn đã đăng ký nhận bản tin thành công!', 'success'); this.reset();">
+                    <input type="email" class="newsletter-input" placeholder="Nhập địa chỉ email của bạn..." required>
+                    <button type="submit" class="newsletter-btn">ĐĂNG KÝ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= KHỐI 11: FOOTER (CHÂN TRANG DÙNG CHUNG) ================= -->
+    <footer class="footer">
+        <div class="container footer__wrapper">
+            <!-- Cột 1 -->
+            <div class="footer__col">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-leaf"></i>
+                    <span>The Green Corner</span>
+                </a>
+                <p class="footer-desc">
+                    Mang hơi thở thuần khiết của thiên nhiên vào không gian sống. Chúng tôi cam kết mang tới những chậu cây khỏe khoắn, được nuôi dưỡng hữu cơ cùng chính sách bảo hành 1 đổi 1 trong 30 ngày.
+                </p>
+                <div class="footer-social-links">
+                    <a href="#" class="footer-social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="footer-social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="footer-social-btn"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="footer-social-btn"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Cột 2 -->
+            <div class="footer__col">
+                <h4 class="footer-heading">Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng Cây Cảnh</a></li>
+                    <li><a href="cart.html">Giỏ Hàng Của Bạn</a></li>
+                    <li><a href="checkout.html">Thủ Tục Thanh Toán</a></li>
+                    <li><a href="blog.html">Cẩm Nang Chăm Sóc Cây</a></li>
+                    <li><a href="contact.html">Liên Hệ Hỗ Trợ</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3 -->
+            <div class="footer__col">
+                <h4 class="footer-heading">Chính Sách & Hỗ Trợ</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Chính sách bảo hành cây 30 ngày</a></li>
+                    <li><a href="#">Quy trình vận chuyển an toàn</a></li>
+                    <li><a href="#">Hướng dẫn chăm sóc cây khi mới nhận</a></li>
+                    <li><a href="#">Phương thức thanh toán & VietQR</a></li>
+                    <li><a href="#">Chính sách bảo mật thông tin</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 4 -->
+            <div class="footer__col">
+                <h4 class="footer-heading">Thông Tin Vườn Ươm</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>123 Đường Láng, Quận Đống Đa, Hà Nội</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Hotline: 0987.654.321 (Zalo 24/7)</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Email: hotro@thegreencorner.vn</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mở cửa: 8:00 - 21:00 (Cả Thứ 7, CN)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer__bottom">
+            <p>© 2026 The Green Corner. Bản quyền thuộc về Sinh viên Nguyễn Trường Vũ - LAB 1-2 Thiết Kế Web.</p>
+            <p>Thiết kế phỏng theo mô hình E-commerce Organi chuẩn quốc tế.</p>
+        </div>
+    </footer>
+
+    <!-- Audio Element ngầm trong thư mục Sounds/ theo chuẩn cấu trúc đề thi -->
+    <audio id="audioNotification" preload="auto">
+        <source src="Sounds/notification.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Nạp Javascript điều khiển toàn bộ chức năng -->
+    <script src="Scripts/main.js"></script>
+</body>
+</html>

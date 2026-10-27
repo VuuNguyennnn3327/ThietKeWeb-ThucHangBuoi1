@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - The Green Corner</title>
+
+    <!-- Font chữ Inter & Playfair Display và Icon Font Awesome 6 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+
+    <!-- TOPBAR -->
+    <div class="header-topbar">
+        <div class="container topbar-wrapper">
+            <div class="topbar-left">
+                <div class="topbar-item"><i class="fa-solid fa-envelope"></i> <span>hotro@thegreencorner.vn</span></div>
+                <div class="topbar-item"><i class="fa-solid fa-truck-fast"></i> <span>Freeship toàn quốc cho đơn hàng từ 300.000đ</span></div>
+            </div>
+            <div class="topbar-right">
+                <a href="contact.html" class="topbar-user"><i class="fa-solid fa-user"></i> <span>Tài khoản</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="header">
+        <div class="container header__wrapper">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span>The Green Corner</span>
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng</a></li>
+                    <li><a href="shop-details.html?id=1">Chi Tiết</a></li>
+                    <li class="active"><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                    <li><a href="blog.html">Tin Tức</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn" title="Yêu thích" onclick="window.location.href='shop.html'">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="action-badge wishlist-badge">0</span>
+                </button>
+                
+                <div class="cart-box-preview cart-btn" title="Xem giỏ hàng">
+                    <button class="action-btn">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="action-badge cart-badge">0</span>
+                    </button>
+                    <div class="cart-info-text">
+                        <span>Giỏ hàng:</span>
+                        <strong class="header-cart-total">0đ</strong>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-label="Mở menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <h1 class="breadcrumb-title">Giỏ Hàng Của Bạn</h1>
+            <div class="breadcrumb-nav">
+                <a href="index.html">Trang Chủ</a>
+                <span>/</span>
+                <span class="current">Giỏ Hàng</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CART SECTION -->
+    <main class="container cart-page-section">
+        
+        <!-- TRẠNG THÁI GIỎ HÀNG TRỐNG (Ẩn mặc định, hiện khi cart.length === 0) -->
+        <div class="cart-empty-state" id="cart-empty-state" style="display: none;">
+            <i class="fa-solid fa-seedling"></i>
+            <h3>Giỏ hàng của bạn đang trống!</h3>
+            <p>Hãy dạo quanh vườn và chọn cho mình những chậu cây xanh tươi mát nhé.</p>
+            <a href="shop.html" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> KHÁM PHÁ CỬA HÀNG</a>
+        </div>
+
+        <!-- BẢNG GIỎ HÀNG (HIỆN KHI CÓ SẢN PHẨM) -->
+        <div id="cart-table-container">
+            <div class="cart-table-wrapper">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Sản Phẩm</th>
+                            <th>Đơn Giá</th>
+                            <th>Số Lượng</th>
+                            <th>Tổng Tiền</th>
+                            <th>Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-table-body">
+                        <!-- Nạp động qua hàm renderCartPage() trong Scripts/main.js -->
+                    </tbody>
+                </table>
+
+                <div class="cart-actions-row">
+                    <a href="shop.html" class="btn btn-outline-dark"><i class="fa-solid fa-arrow-left"></i> TIẾP TỤC MUA CÂY</a>
+                    <button class="btn btn-outline-dark" onclick="clearCart()"><i class="fa-regular fa-trash-can"></i> XÓA TOÀN BỘ GIỎ HÀNG</button>
+                </div>
+            </div>
+
+            <!-- KHỐI COUPON & TỔNG KẾT ĐƠN HÀNG -->
+            <div class="cart-bottom-grid">
+                
+                <!-- Nhập mã giảm giá -->
+                <div class="coupon-box">
+                    <h4>Mã Ưu Đãi Giảm Giá</h4>
+                    <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px;">
+                        Nhập mã <b>MAMXANH</b> hoặc <b>GREENCORNER</b> để nhận ngay chiết khấu 10% trên tổng đơn hàng.
+                    </p>
+                    <div class="coupon-input-group">
+                        <input type="text" id="coupon-input" placeholder="Nhập mã ưu đãi tại đây...">
+                        <button type="button" class="btn btn-primary" id="apply-coupon-btn">ÁP DỤNG</button>
+                    </div>
+                </div>
+
+                <!-- Tổng kết tiền thanh toán -->
+                <div class="cart-summary-box">
+                    <h4>Cộng Giỏ Hàng</h4>
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <strong id="cart-subtotal">0đ</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Giảm giá (Coupon):</span>
+                        <span id="cart-discount" style="color: var(--sale-red); font-weight: 700;">-0đ</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí giao hàng:</span>
+                        <span id="cart-shipping" style="font-weight: 600;">Miễn phí</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Tổng thanh toán:</span>
+                        <strong id="cart-total">0đ</strong>
+                    </div>
+                    <a href="checkout.html" class="btn btn-primary w-100" style="margin-top: 15px; padding: 14px;">
+                        TIẾN HÀNH THANH TOÁN <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__wrapper">
+            <div class="footer__col">
+                <a href="index.html" class="logo"><i class="fa-solid fa-leaf"></i> <span>The Green Corner</span></a>
+                <p class="footer-desc">Mang hơi thở thuần khiết của thiên nhiên vào không gian sống của bạn.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="shop.html">Cửa Hàng</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Chính Sách</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Bảo hành 30 ngày</a></li>
+                    <li><a href="#">Vận chuyển an toàn</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer-heading">Liên Hệ</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Đường Láng, Đống Đa, Hà Nội</p>
+                <p><i class="fa-solid fa-phone"></i> Hotline: 0987.654.321</p>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2026 The Green Corner. Đồ án Thực hành Web.</p>
+        </div>
+    </footer>
+
+    <script src="Scripts/main.js"></script>
+</body>
+</html>
